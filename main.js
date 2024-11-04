@@ -13,6 +13,15 @@ fetch('https://www.course-api.com/javascript-store-products')
         products.forEach(product => {
             const listItem = document.createElement('li');
             listItem.classList.add('product');
+//Task 3: Format product information dynamically.
+            listItem.innerHTML = `
+            <h2>${product.name}</h2>
+            <p>Company: ${product.company}</p>
+            <p>Price: $${product.price}</p> 
+            <img src="${product.image}" alt="${product.name}" style="width: 100px; height: auto;">
+        `;
+        
+        productList.appendChild(listItem);
         });})
 
     .catch(error => {
