@@ -26,4 +26,6 @@ fetch('https://www.course-api.com/javascript-store-products')
 
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
+//Task 4: Display a friendly error message to the user
+        productList.innerHTML = '<li>Sorry! We failed to load products. Please try again later:)</li>';
     });
